@@ -7,9 +7,9 @@ navbar:
     - text: "Homework"
       menu: 
         - text: "homework 0"
-          href: hw-0.html
+          href: hw0.html
     - text: "Project"
-      href: team-proj-0.html
+      href: teamproj0.html
 output:
   html_document:
     css: style.css
