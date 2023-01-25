@@ -3,10 +3,10 @@ fnames <- list.files(path=".",
                      all.files=TRUE,
                      full.names=TRUE)
 
-my_function <- function(fname) {
+f_render <- function(fname) {
   rmarkdown::render_site( paste(fname) )
 }
 
-for (x in fnames) {
-  my_function(x)
+for (fname in fnames) {
+  f_render(fname)
 }
