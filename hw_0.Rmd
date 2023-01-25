@@ -1,0 +1,20 @@
+---
+title: "My Homework"
+---
+```{r setup, include = F}
+library(tidyverse)
+```
+
+# ggplot
+
+## Why ggplot is awesome
+
+The following boxplot shows how the distribution of city MPG (`cty`) varies by a type of cars (`class`).
+
+```{r echo = T, eval = T}
+library(tidyverse)
+ggplot(mpg) +
+  geom_boxplot(aes(x = class, y = cty, fill = class))
+```
+
+
