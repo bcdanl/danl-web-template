@@ -1,9 +1,16 @@
 name: "personal-website"
 output_dir: "."
+theme: style.css
 navbar:
   title: "YOUR_NAME"
   left:
     - text: "Homework"
       menu: 
         - text: "homework 0"
-          href: hw_0.html
+          href: hw-0.html
+    - text: "Project"
+      href: team-proj-0.html
+output:
+  html_document:
+    css: style.css
+

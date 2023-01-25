@@ -58,6 +58,7 @@ if (window.hljs) {
 
 
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 
 
 
@@ -250,9 +251,12 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="hw_0.html">homework 0</a>
+      <a href="hw-0.html">homework 0</a>
     </li>
   </ul>
+</li>
+<li>
+  <a href="team-proj-0.html">Project</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -277,10 +281,9 @@ $(document).ready(function () {
 <h2>Why ggplot is awesome</h2>
 <p>The following boxplot shows how the distribution of city MPG
 (<code>cty</code>) varies by a type of cars (<code>class</code>).</p>
-<pre class="r"><code>library(tidyverse)
-ggplot(mpg) +
+<pre class="r"><code>ggplot(mpg) +
   geom_boxplot(aes(x = class, y = cty, fill = class))</code></pre>
-<p><img src="hw_0_files/figure-html/mpg-box-1.png" width="672" /></p>
+<p><img src="hw0_files/figure-html/mpg-box-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 

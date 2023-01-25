@@ -1,0 +1,11 @@
+img {
+  width: 85%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* to fix navbar position */
+body{
+  position: fixed; width: 100%;
+}
+
