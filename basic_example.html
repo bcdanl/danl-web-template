@@ -11,7 +11,7 @@
 
 <meta name="author" content="Awesome Me" />
 
-<meta name="date" content="2023-01-26" />
+<meta name="date" content="2023-01-27" />
 
 <title>Hello R Markdown</title>
 
@@ -287,16 +287,28 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">Hello R Markdown</h1>
 <h4 class="author">Awesome Me</h4>
-<h4 class="date">January 26, 2023</h4>
+<h4 class="date">January 27, 2023</h4>
 
 </div>
 
 
-<p>This is a paragraph in an R Markdown document.</p>
+<div id="r-markdown-intro" class="section level1">
+<h1>R Markdown: Intro</h1>
+<p>This is a paragraph in an <a href="https://rmarkdown.rstudio.com">R
+Markdown</a> document.</p>
+<div id="ggplot-exmaple" class="section level2">
+<h2>ggplot exmaple</h2>
 <p>Below is a code chunk:</p>
-<pre class="r"><code>library(tidyverse)
-
-fit &lt;- lm(dist ~ speed, data = cars)
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+## ✔ ggplot2 3.4.0      ✔ purrr   1.0.1 
+## ✔ tibble  3.1.8      ✔ dplyr   1.0.10
+## ✔ tidyr   1.2.1      ✔ stringr 1.5.0 
+## ✔ readr   2.1.3      ✔ forcats 0.5.2 
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>fit &lt;- lm(dist ~ speed, data = cars)
 b &lt;- coef(fit)
 
 ggplot(cars) +
@@ -305,7 +317,9 @@ ggplot(cars) +
                method = lm)</code></pre>
 <pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="basic_example_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-<p>The slope of the regression is -17.5790949.</p>
+<p>The slope of the regression is 3.9324088.</p>
+</div>
+</div>
 
 <script type="text/javascript" src="links.js"></script>
 

@@ -5,8 +5,12 @@ date: "`r format(Sys.time(), '%B %d, %Y')`"
 output: html_document
 ---
 
-This is a paragraph in an R Markdown document.
 
+# R Markdown: Intro
+
+This is a paragraph in an [R Markdown](https://rmarkdown.rstudio.com) document.
+
+## ggplot exmaple
 Below is a code chunk:
 
 ```{r}
@@ -22,4 +26,8 @@ ggplot(cars) +
 
 ```
 
-The slope of the regression is `r b[1]`.
+The slope of the regression is `r b[2]`.
+
+
+
+
