@@ -11,7 +11,7 @@
 
 <meta name="author" content="Awesome Me" />
 
-<meta name="date" content="2023-01-27" />
+<meta name="date" content="2023-01-31" />
 
 <title>Hello R Markdown</title>
 
@@ -287,7 +287,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">Hello R Markdown</h1>
 <h4 class="author">Awesome Me</h4>
-<h4 class="date">January 27, 2023</h4>
+<h4 class="date">January 31, 2023</h4>
 
 </div>
 
@@ -316,8 +316,82 @@ ggplot(cars) +
                     y = dist ),
                method = lm)</code></pre>
 <pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
-<p><img src="basic_example_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p><img src="basic_example_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p>The slope of the regression is 3.9324088.</p>
+</div>
+<div id="nextsteps" class="section level2 emphasized">
+<h2 class="emphasized">Next Steps</h2>
+</div>
+<div id="next-next-steps" class="section level2 unnumbered">
+<h2 class="unnumbered">Next Next Steps</h2>
+<pre class="r"><code>colorize &lt;- function(x, color) {
+  if (knitr::is_latex_output()) {
+    sprintf(&quot;\\textcolor{%s}{%s}&quot;, color, x)
+  } else if (knitr::is_html_output()) {
+    sprintf(&quot;&lt;span style=&#39;color: %s;&#39;&gt;%s&lt;/span&gt;&quot;, color,
+      x)
+  } else x
+}</code></pre>
+<p><span style="color: #3399ff;">some words in blue-ish</span></p>
+</div>
+<div id="figures" class="section level2">
+<h2>figures</h2>
+<div id="markdown-with-div-width" class="section level3">
+<h3>markdown with div width</h3>
+<div style="width:25%">
+<p><img src="img/geneseo-logo-vertical.png" /></p>
+</div>
+</div>
+<div id="markdown-with-css-right" class="section level3">
+<h3>markdown with css right</h3>
+<div>
+<div style="column-left">
+<p>some text left</p>
+</div>
+<div style="column-center">
+<p>some text left</p>
+</div>
+<div style="column-right">
+<p><img src="img/geneseo-logo-vertical.png" /></p>
+</div>
+</div>
+</div>
+<div id="markdown-with-css-img" class="section level3">
+<h3>markdown with css img</h3>
+<div style="img">
+<p><img src="img/geneseo-logo-vertical.png" /></p>
+<p>some text here</p>
+</div>
+<p><img src="img/geneseo-logo-vertical.png" width="50px" text-align = "right" ></p>
+<center>
+<img src="img/geneseo-logo-vertical.png" alt="centered image" height="200" width="200">
+</center>
+<p><img src="img/geneseo-logo-vertical.png" style="width:25.0%" /></p>
+<p><img src="img/geneseo-logo-vertical.png" width="100px" height="100px" /></p>
+<p><img src="img/geneseo-logo-vertical.png" style="width:25.0%" /><img
+src="img/geneseo-logo-vertical.png" style="width:25.0%" /><img
+src="img/geneseo-logo-vertical.png" style="width:25.0%" /> <img
+src="img/geneseo-logo-vertical.png" style="width:25.0%" /></p>
+<p><br></p>
+<p><font face="arial" size = 3> The following quote is the final
+paragraph of Darwin’s <em>The Origin of Species</em>. I’ve added some
+highlighted words in red which I think really make a good
+point.</font></p>
+<p><font face = "sans-serif" size = 4 color = 'blue'> Thus, from the war
+of nature, from famine and death, the most exalted object which we are
+capable of conceiving, namely, the production of the higher animals,
+directly follows. <font color="red">There is grandeur in this view of
+life</font>, with its several powers, having been originally breathed
+into a few forms or into one; and that, whilst this planet has gone
+cycling on according to the fixed law of gravity,
+<font color="#FF0000">from so simple a beginning endless forms most
+beautiful and most wonderful have been, and are being,
+evolved.</font></font></p>
+<p><br></p>
+<p><font face = "arial" size = 3> I’ve always thought that this is an
+example of how good science writing can be beautiful as well as
+functional.</font></p>
+</div>
 </div>
 </div>
 

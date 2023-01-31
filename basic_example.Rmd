@@ -2,8 +2,14 @@
 title: "Hello R Markdown"
 author: "Awesome Me"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
-output: html_document
+output: 
+  html_document:
+    css: style.css
 ---
+```{r, include=F}
+library(fontawesome)
+
+```
 
 
 # R Markdown: Intro
@@ -29,5 +35,81 @@ ggplot(cars) +
 The slope of the regression is `r b[2]`.
 
 
+## Next Steps {#nextsteps .emphasized}
 
 
+## Next Next Steps {.unnumbered}
+
+```{r colorize}
+colorize <- function(x, color) {
+  if (knitr::is_latex_output()) {
+    sprintf("\\textcolor{%s}{%s}", color, x)
+  } else if (knitr::is_html_output()) {
+    sprintf("<span style='color: %s;'>%s</span>", color,
+      x)
+  } else x
+}
+```
+
+`r colorize( "some words in blue-ish", "#3399ff" )`
+
+
+## figures
+
+
+### markdown with div width
+<div style="width:25%">
+![](img/geneseo-logo-vertical.png)
+</div>
+
+### markdown with css right
+<div>
+<div style="column-left">
+some text left
+</div>
+
+
+<div style="column-center">
+some text left
+</div>
+<div style="column-right">
+![](img/geneseo-logo-vertical.png)
+</div>
+</div>
+
+### markdown with css img
+
+<div style="img">
+![](img/geneseo-logo-vertical.png)
+
+some text here
+</div>
+
+<img src="img/geneseo-logo-vertical.png" width="50px" text-align = "right" >
+
+<center><img src="img/geneseo-logo-vertical.png" alt="centered image" height="200" width="200"> </center>
+
+
+
+![](img/geneseo-logo-vertical.png){width=25%}
+
+
+```{r, echo=F, out.width="100px", out.height="100px", fig.asp= .5}
+knitr::include_graphics("img/geneseo-logo-vertical.png")
+```
+
+![](img/geneseo-logo-vertical.png){width=25%}![](img/geneseo-logo-vertical.png){width=25%}![](img/geneseo-logo-vertical.png){width=25%}
+![](img/geneseo-logo-vertical.png){width=25%}
+
+
+
+
+<br>
+
+<font face="arial" size = 3> The following quote is the final paragraph of Darwin's *The Origin of Species*. I've added some highlighted words in red which I think really make a good point.</font>
+
+<font face = "sans-serif" size = 4 color = 'blue'> Thus, from the war of nature, from famine and death, the most exalted object which we are capable of conceiving, namely, the production of the higher animals, directly follows. <font color="red">There is grandeur in this view of life</font>, with its several powers, having been originally breathed into a few forms or into one; and that, whilst this planet has gone cycling on according to the fixed law of gravity, <font color="#FF0000">from so simple a beginning endless forms most beautiful and most wonderful have been, and are being, evolved.</font></font>
+
+<br>
+
+<font face = "arial" size = 3> I've always thought that this is an example of how good science writing can be beautiful as well as functional.</font>
