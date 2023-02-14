@@ -10,20 +10,27 @@ format:
 editor: visual
 ---
 
-```{r, include=F}
-library(fontawesome)
-
+```{r setup, include = F}
+library(tidyverse)
+library(skimr)   # a better summary of data.frame
+library(scales)  # scales for ggplot
+library(ggthemes)  # additional ggplot themes
+theme_set(theme_minimal()) # setting the minimal theme for ggplot
+# setting default chunk options
+knitr::opts_chunk$set(echo = T, eval = T,
+                      message=F, warning = F) 
 ```
 
 
 ## Quarterly Results {.tabset .tabset-pills}
 
 ### By Product
+
 (tab content) 1
 
 ### By Region
-(tab content) 2
 
+(tab content) 2
 
 ```{r}
 library(tidyverse)
@@ -31,12 +38,12 @@ ggplot(mpg) +
   geom_boxplot(aes(x = class, y = hwy))
 ```
 
-
-
 # Example Title {.unnumbered}
+
 Here is some example title.
 
 ## Section X
+
 This is my introduction.
 
 ```{r}
@@ -44,16 +51,18 @@ x <- 1
 print(x)
 ```
 
-
-
 # Section 1
+
 Wake up
 
 ## Section 1.1
+
 Drink water
 
 ## Section 1.2
+
 Sleep again
 
 # Section 2
+
 Wake up
